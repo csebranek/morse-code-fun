@@ -8,10 +8,9 @@
 	const navItems = [
 		{ href: `${base}/`, label: 'Home' },
 		{ href: `${base}/learn`, label: 'Learn' },
-		{ href: `${base}/tree`, label: 'Binary Tree' },
-		{ href: `${base}/mnemonics`, label: 'Mnemonics' },
 		{ href: `${base}/quiz`, label: 'Quiz' },
 		{ href: `${base}/encode`, label: 'Encode' },
+		{ href: `${base}/mnemonics`, label: 'Decode' },
 		{ href: `${base}/adventure`, label: 'Adventure' },
 		{ href: `${base}/passive`, label: 'Passive' },
 	];
