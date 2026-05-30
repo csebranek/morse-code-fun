@@ -22,7 +22,16 @@
 		showCode = false;
 		practiceFeedback = '';
 		practiceInput = '';
-		currentIndex = (currentIndex + 1) % MORSE_ALPHABET.length;
+		if (practiceMode) {
+			let next = Math.floor(Math.random() * MORSE_ALPHABET.length);
+			// avoid same letter twice in a row
+			if (MORSE_ALPHABET.length > 1) {
+				while (next === currentIndex) next = Math.floor(Math.random() * MORSE_ALPHABET.length);
+			}
+			currentIndex = next;
+		} else {
+			currentIndex = (currentIndex + 1) % MORSE_ALPHABET.length;
+		}
 	}
 
 	function prev() {
@@ -65,13 +74,13 @@
 	<!-- Mode toggle -->
 	<div class="flex justify-center gap-4">
 		<button
-			onclick={() => practiceMode = false}
+			onclick={() => { practiceMode = false; }}
 			class="px-6 py-2 rounded-lg font-bold transition-colors cursor-pointer {!practiceMode ? 'bg-amber-600 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'}"
 		>
 			📖 Study Mode
 		</button>
 		<button
-			onclick={() => practiceMode = true}
+			onclick={() => { practiceMode = true; currentIndex = Math.floor(Math.random() * MORSE_ALPHABET.length); showCode = false; practiceFeedback = ''; practiceInput = ''; }}
 			class="px-6 py-2 rounded-lg font-bold transition-colors cursor-pointer {practiceMode ? 'bg-amber-600 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'}"
 		>
 			🎧 Practice Mode
@@ -84,7 +93,7 @@
 			<button
 				onclick={() => { currentIndex = i; showCode = false; practiceFeedback = ''; practiceInput = ''; }}
 				class="w-8 h-8 rounded text-xs font-bold transition-all cursor-pointer
-					{i === currentIndex ? 'bg-amber-600 text-white scale-110' :
+					{!practiceMode && i === currentIndex ? 'bg-amber-600 text-white scale-110' :
 					masteredLetters.has(entry.char) ? 'bg-green-700 text-green-100' :
 					'bg-gray-800 text-gray-500 hover:bg-gray-700'}"
 				data-testid="mnemonic-nav-{entry.char}"
