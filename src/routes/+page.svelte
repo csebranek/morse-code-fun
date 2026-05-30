@@ -139,16 +139,20 @@
 				<h3 class="text-lg font-bold text-amber-300 group-hover:text-amber-400 mb-2">1. Learn the Basics</h3>
 				<p class="text-gray-400 text-sm">Understand the International Morse Code chart for letters, numbers, and timing.</p>
 			</a>
-			<a href="{base}/tree" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-amber-600 transition-colors group">
-				<div class="text-3xl mb-3">🌳</div>
-				<h3 class="text-lg font-bold text-amber-300 group-hover:text-amber-400 mb-2">2. Build the Binary Tree</h3>
-				<p class="text-gray-400 text-sm">Master the "E.T. Ian" method by constructing the dichotomous search tree yourself.</p>
-			</a>
 			<a href="{base}/mnemonics" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-amber-600 transition-colors group">
 				<div class="text-3xl mb-3">🧠</div>
-				<h3 class="text-lg font-bold text-amber-300 group-hover:text-amber-400 mb-2">3. Master Mnemonics</h3>
+				<h3 class="text-lg font-bold text-amber-300 group-hover:text-amber-400 mb-2">2. Master Mnemonics</h3>
 				<p class="text-gray-400 text-sm">Learn fun phrases for each letter so you can decode Morse code by ear.</p>
 			</a>
+			<div class="bg-gray-900 rounded-xl p-6 border border-gray-800 group space-y-3">
+				<div class="text-3xl mb-3">🔤</div>
+				<h3 class="text-lg font-bold text-amber-300 mb-2">3. Explore Encode &amp; Decode</h3>
+				<p class="text-gray-400 text-sm mb-3">Put your knowledge into practice — translate text to Morse and decode signals back to letters.</p>
+				<div class="flex gap-2 flex-wrap">
+					<a href="{base}/encode" class="text-xs bg-amber-700 hover:bg-amber-600 text-white font-semibold px-3 py-1 rounded-full transition-colors">Encode →</a>
+					<a href="{base}/mnemonics" class="text-xs bg-gray-700 hover:bg-gray-600 text-white font-semibold px-3 py-1 rounded-full transition-colors">Decode →</a>
+				</div>
+			</div>
 			<a href="{base}/quiz" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-amber-600 transition-colors group">
 				<div class="text-3xl mb-3">🎯</div>
 				<h3 class="text-lg font-bold text-amber-300 group-hover:text-amber-400 mb-2">4. Test Yourself</h3>
