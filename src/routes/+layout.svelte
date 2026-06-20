@@ -31,7 +31,7 @@
 	<title>Morse Code Academy</title>
 </svelte:head>
 
-<div class="min-h-screen bg-gray-950 text-gray-100">
+<div class="min-h-screen bg-[#03363D] text-[#BDD9D7]">
 	{#if showMobileBanner}
 		<div class="bg-yellow-600 text-yellow-950 px-4 py-3 flex items-start justify-between gap-4">
 			<p class="text-sm font-medium leading-snug">
